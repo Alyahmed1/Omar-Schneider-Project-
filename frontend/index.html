@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schneider VFD Compliance + Part Lookup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="/static/assets/schneider-logo.png" alt="Schneider Electric" />
+      <div>
+        <div class="brand-title">Schneider VFD Workbench</div>
+        <div class="brand-sub">1 · Size (kW) → 2 · Compliance → 3 · Learn from corrections</div>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="lookup" role="tab">1 · Size</button>
+      <button class="tab" data-tab="compliance" role="tab">2 · Compliance</button>
+      <button class="tab" data-tab="learn" role="tab">3 · Learn</button>
+      <button class="tab tab-tool" data-tab="parts" role="tab">Combined datasheet</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="panel-lookup" class="panel active">
+      <div class="panel-intro">
+        <h1>Step 1 — Size by kW</h1>
+        <p class="hint-note">
+          <strong>Note:</strong> Enter one line per drive.
+          <strong>kW only:</strong> <code>22</code> ·
+          <strong>kW + qty:</strong> <code>22,4</code> (comma + whole number) ·
+          <strong>kW + HP:</strong> <code>0.75/1</code> or <code>0.37/0.5</code> (slash).
+          Duty (<strong>ND</strong>/<strong>HD</strong>) is detected automatically from the catalog and shown in the results.
+        </p>
+      </div>
+
+      <form id="size-form" class="card form-card">
+        <label class="field">
+          <span>kW lines (one per line). Examples: <code>22</code> · <code>22,4</code> (kw,qty) · <code>0.75/1</code> (kw/hp)</span>
+          <textarea id="kw-input" rows="5" placeholder="0.75/1&#10;0.37/0.5&#10;22,4" required></textarea>
+        </label>
+        <div class="size-options">
+          <label class="check">
+            <input type="checkbox" id="size-cabinet" />
+            Cabinet integration (use …N4Z codes)
+          </label>
+          <label class="field inline-field">
+            <span>Grid Hz</span>
+            <select id="size-hz">
+              <option value="50" selected>50 Hz</option>
+              <option value="60">60 Hz</option>
+            </select>
+          </label>
+          <label class="field inline-field">
+            <span>Harmonics</span>
+            <select id="size-harmonics" title="Low: THDi &lt;5% / IEEE 519 path; Standard: Process offer">
+              <option value="standard" selected>Standard</option>
+              <option value="low">Low (THDi &lt;5%)</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary" id="btn-size">Recommend drives</button>
+          <button type="button" class="btn primary" id="btn-size-go" disabled>Look up, combine datasheet &amp; attach</button>
+        </div>
+        <p class="hint" id="size-status">Enter kW lines from the email, then recommend.</p>
+      </form>
+
+      <div class="card table-wrap size-results-wrap" id="size-results-wrap" hidden>
+        <div class="table-meta">
+          <span id="size-meta">Sizing results</span>
+          <span class="status-legend">Filter 5% only when Harmonics = Low · empty in Standard</span>
+        </div>
+        <div class="table-scroll">
+          <table id="size-table">
+            <thead>
+              <tr>
+                <th>kW</th>
+                <th>Qty</th>
+                <th>Duty</th>
+                <th>Drive</th>
+                <th>Family</th>
+                <th>Filter 5%</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel-compliance" class="panel">
+      <div class="panel-intro">
+        <h1>Step 2 — Compliance sheet</h1>
+        <p>Requires attached Product Datasheets from Step 1. Offered parts are taken automatically from Part Lookup. Enclosure IP is read from this spec (IP54/55 needs ATV650; ATV630 is IP21) — nobody selects it.</p>
+      </div>
+
+      <div class="card form-card attached-box" id="attached-box">
+        <div class="field">
+          <span>Attached Product Datasheets (required)</span>
+          <div id="attached-list" class="attached-list">None yet — complete Step 1 (size &amp; attach).</div>
+          <div id="offer-line" class="offer-line" hidden></div>
+        </div>
+      </div>
+
+      <form id="compliance-form" class="card form-card">
+        <label class="field">
+          <span>Consultant specification PDF</span>
+          <input type="file" id="pdf-file" accept="application/pdf,.pdf" required />
+        </label>
+        <label class="field">
+          <span>Optional extra datasheet into knowledge folder</span>
+          <input type="file" id="knowledge-file" accept="application/pdf,.pdf" />
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary" id="btn-generate">Generate draft</button>
+          <button type="button" class="btn ghost" id="btn-regenerate" disabled>Regenerate</button>
+          <button type="button" class="btn ghost" id="btn-save" disabled>Save edits</button>
+          <button type="button" class="btn secondary" id="btn-xlsx" disabled>Download Excel</button>
+          <button type="button" class="btn secondary" id="btn-docx" disabled>Download Word</button>
+        </div>
+        <p class="hint" id="compliance-status">Attach Product Datasheets in Step 1 before generating.</p>
+      </form>
+
+      <div class="table-wrap card" id="draft-wrap" hidden>
+        <div class="table-meta">
+          <span id="draft-meta"></span>
+          <span class="status-legend">Primary: <b class="yes">Yes</b> = complies · <b class="no">No</b> = does not · <b class="na">N/A</b></span>
+        </div>
+        <div class="table-scroll">
+          <table id="draft-table">
+            <thead>
+              <tr>
+                <th>Clause</th>
+                <th>Requirement</th>
+                <th class="status-col">Complies?</th>
+                <th>Why (short)</th>
+                <th>Page</th>
+                <th>Schneider source</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel-learn" class="panel">
+      <div class="panel-intro">
+        <h1>Step 3 — Learn from corrections</h1>
+        <p>
+          <strong>Error loop only:</strong> after the client reviews a sheet <em>we generated</em> and finds a mistake,
+          they edit the Excel/Word and you upload it here. That fix updates the rule book and the gold reference DB
+          so the same error is not repeated. Your 10 correct sheets belong in <code>data/references/</code> (ingest once) —
+          not here. References are never cited as Schneider Source.
+        </p>
+      </div>
+      <form id="learn-form" class="card form-card">
+        <label class="field">
+          <span>Client-corrected sheet from Step 2 (.xlsx or .docx)</span>
+          <input type="file" id="learn-file" accept=".xlsx,.xlsm,.docx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required />
+        </label>
+        <label class="field">
+          <span>Offered family / parts (optional — auto from attached if blank)</span>
+          <input type="text" id="learn-offer" placeholder="ATV630U07N4 or ATV630" />
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary" id="btn-learn">Import corrections</button>
+        </div>
+        <p class="hint" id="learn-status">Use only when the client found an error. Bulk correct answers go in data/references/ + ingest script.</p>
+      </form>
+      <div class="card table-wrap" id="learn-report" hidden>
+        <div class="table-meta"><span id="learn-meta"></span></div>
+        <pre id="learn-json" class="learn-json"></pre>
+      </div>
+    </section>
+
+    <section id="panel-parts" class="panel">
+      <div class="panel-intro">
+        <h1>Combined datasheet</h1>
+        <p>
+          Extra task — not part of Size / Compliance / Learn.
+          Paste commercial references, look them up on Schneider, and download one combined Product Datasheet PDF.
+        </p>
+      </div>
+      <form id="lookup-form" class="card form-card">
+        <label class="field">
+          <span>Part numbers (one per line, or comma-separated)</span>
+          <textarea id="part-input" rows="6" placeholder="ATV630D22N4&#10;ATV630C25N4&#10;VW3A46112"></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary" id="btn-lookup">Look up on Schneider</button>
+          <button type="button" class="btn secondary" id="btn-zip" disabled>Download combined Product Datasheet</button>
+        </div>
+        <p class="hint" id="lookup-status">Paste part numbers from an email or BOM. Output is a merged PDF only.</p>
+      </form>
+      <div id="lookup-results" class="results-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Local engineering aid — rules + catalog lookup (not a trained model). Schneider pages only when verified. Port 8001.
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

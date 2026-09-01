@@ -1,0 +1,612 @@
+{
+  "ATV600": {
+    "family_name": "Altivar Process ATV600",
+    "typical_refs": [
+      "ATV630",
+      "ATV650",
+      "ATV600"
+    ],
+    "capabilities": {
+      "afe_low_harmonic": {
+        "status": "partial",
+        "remark": "ATV600 Process range supports low-harmonic solutions; for THDi <5% / AFE requirement, select ATV600 low-harmonic / AFE configuration or ATV680 as applicable, and submit harmonic spectrum per IEEE 519."
+      },
+      "ip54_enclosure": {
+        "status": "yes",
+        "remark": "ATV600 / ATV630 wall-mount and floor-stand variants available with IP21 or IP55; IP54 panel integration with inlet air filters can be provided as specified for floor-stand mounting."
+      },
+      "pwm_vhz": {
+        "status": "yes",
+        "remark": "ATV600 uses PWM inverter technology with advanced motor control suitable for pump and fan variable-torque applications, maintaining controlled V/f / vector operation across the speed range."
+      },
+      "ieee519": {
+        "status": "partial",
+        "remark": "Compliance with IEEE 519 is achieved by selecting the appropriate low-harmonic topology / filters for the project supply network; harmonic calculation can be provided upon request."
+      },
+      "emc_rfi": {
+        "status": "yes",
+        "remark": "ATV600 drives include integrated EMC filter options for 2nd environment (EN 61800-3 category C2/C3 depending on configuration) and meet CE / EMC requirements when installed per manufacturer instructions."
+      },
+      "protections": {
+        "status": "yes",
+        "remark": "Built-in protections include overcurrent, short-circuit, input/output phase loss, motor overload/underload, over/undervoltage, overspeed, overtemperature, motor stall, ground fault and thermal motor protection."
+      },
+      "comms": {
+        "status": "yes",
+        "remark": "Embedded Ethernet and Modbus communication as standard on ATV600 Process for BMS / SCADA / PLC interface; additional fieldbus options available."
+      },
+      "pid": {
+        "status": "yes",
+        "remark": "Built-in process PID controller for pump/fan process control applications."
+      },
+      "skip_frequencies": {
+        "status": "yes",
+        "remark": "Programmable skip frequencies available to avoid critical resonance speeds (minimum 3 skip bands)."
+      },
+      "power_ride_through": {
+        "status": "yes",
+        "remark": "Power loss ride-through capability using stored energy / kinetic buffering features of Altivar Process."
+      },
+      "efficiency_98": {
+        "status": "yes",
+        "remark": "Drive efficiency typically ≥98% at full load for Altivar Process ATV600 range (configuration dependent)."
+      },
+      "ambient_50c": {
+        "status": "yes",
+        "remark": "Operation up to 50 °C with derating above 40 °C as per catalog; design can apply derating for 45–50 °C ambient as required."
+      },
+      "altitude_1000m": {
+        "status": "yes",
+        "remark": "Up to 1000 m without derating; above 1000 m derating per Schneider catalog."
+      },
+      "overload_vt": {
+        "status": "yes",
+        "remark": "Normal duty (variable torque pump/fan) rating: typically 110% for 60 s per 10 minutes — suitable for pump applications."
+      },
+      "output_freq_500": {
+        "status": "yes",
+        "remark": "Output frequency range supports up to 500 Hz (application / motor dependent)."
+      },
+      "hoa_local_remote": {
+        "status": "yes",
+        "remark": "Door-mounted H-O-A / local-remote and speed reference control can be provided via keypad and digital/analog I/O or graphic terminal as specified."
+      },
+      "dry_contacts": {
+        "status": "yes",
+        "remark": "Configurable digital outputs / form-C relay contacts available for Run and Fault indication."
+      },
+      "analog_io": {
+        "status": "yes",
+        "remark": "Analog inputs (0–10 V / 4–20 mA) and analog outputs proportional to speed/load are available."
+      },
+      "bypass": {
+        "status": "partial",
+        "remark": "Manual bypass / Drive-Off-Line-Test arrangements can be supplied in a packaged panel with separate bypass section and motor overload protection in both drive and bypass modes."
+      },
+      "line_reactors": {
+        "status": "yes",
+        "remark": "DC choke / line reactor options and recommended input line reactors available to reduce harmonics and improve immunity to line transients."
+      },
+      "output_filter": {
+        "status": "yes",
+        "remark": "Motor output choke / dV/dt or sinus filter options available depending on cable length and motor insulation."
+      },
+      "ul_etl": {
+        "status": "yes",
+        "remark": "ATV600 / ATV630 products carry CE marking and relevant UL / CSA listings depending on catalog reference; packaged panels can be listed as required."
+      },
+      "ce_iec": {
+        "status": "yes",
+        "remark": "CE marked and designed to IEC/EN 61800 series; installation per manufacturer EMC guidelines required to maintain declared limits."
+      },
+      "iso14001": {
+        "status": "yes",
+        "remark": "Schneider Electric manufacturing sites operate under certified quality and environmental management systems including ISO 14001."
+      },
+      "local_support_egypt": {
+        "status": "yes",
+        "remark": "Schneider Electric Egypt / authorized channel provides local technical support, commissioning assistance and spare-parts logistics."
+      },
+      "space_heater": {
+        "status": "partial",
+        "remark": "Cabinet space heater can be included in the packaged VFD enclosure when specified for condensation control."
+      },
+      "manufacturer_approved": {
+        "status": "yes",
+        "remark": "Schneider Electric is proposed as manufacturer; final acceptance subject to Engineer / approved vendors list."
+      },
+      "input_voltage_380_400": {
+        "status": "yes",
+        "remark": "Standard three-phase 380–480 V ratings available (e.g. …N4 references); ±10% supply tolerance per datasheet."
+      },
+      "freq_50hz": {
+        "status": "yes",
+        "remark": "Rated for 50/60 Hz supplies within catalog tolerance."
+      },
+      "power_factor": {
+        "status": "yes",
+        "remark": "High fundamental displacement power factor (typically ≥0.97 at full load for Process drives / AFE configurations)."
+      },
+      "cable_length": {
+        "status": "yes",
+        "remark": "Motor cable length per Schneider recommendation (shielded cable); extended lengths supported with output filters — typically up to manufacturer limits with Engineer approval."
+      },
+      "auto_restart": {
+        "status": "yes",
+        "remark": "Programmable automatic restart after selected faults with limited number of attempts for safety."
+      },
+      "flux_optimization": {
+        "status": "yes",
+        "remark": "Energy-saving / flux optimization functions embedded for partial-load pump and fan applications."
+      },
+      "noise_switching": {
+        "status": "yes",
+        "remark": "Adjustable switching frequency to minimize audible motor noise; typically ≥2 kHz available across the power range."
+      },
+      "factory_test": {
+        "status": "yes",
+        "remark": "Drives are factory tested by Schneider Electric; optional features functionally verified. Packaged panels can include additional FAT as specified."
+      },
+      "submittals": {
+        "status": "yes",
+        "remark": "Product data, dimensional drawings, connection diagrams, manuals, FLA ratings and catalog information will be submitted."
+      }
+    }
+  },
+  "ATV630": {
+    "family_name": "Altivar Process ATV630",
+    "typical_refs": [
+      "ATV630"
+    ],
+    "capabilities": {
+      "afe_low_harmonic": {
+        "status": "partial",
+        "remark": "Standard ATV630 is a Process drive with DC choke; for Active Front End / THDi <5%, propose low-harmonic ATV600/ATV680 solution or add passive/active harmonic mitigation and submit IEEE 519 study."
+      },
+      "ip54_enclosure": {
+        "status": "yes",
+        "remark": "ATV630 available in IP21 and higher protection packaged panels; IP54 floor-stand enclosure with inlet air filters can be provided as specified."
+      },
+      "pwm_vhz": {
+        "status": "yes",
+        "remark": "ATV630 PWM variable-speed drive with process-oriented motor control for pumps and fans."
+      },
+      "ieee519": {
+        "status": "partial",
+        "remark": "IEEE 519 compliance depends on network and mitigation package; harmonic spectrum and filter recommendation can be provided for the project supply."
+      },
+      "emc_rfi": {
+        "status": "yes",
+        "remark": "Integrated EMC filter (2nd environment) available on ATV630; CE / EN 61800-3 compliance when installed per manual."
+      },
+      "protections": {
+        "status": "yes",
+        "remark": "Built-in protections include overcurrent, short-circuit, input/output phase loss, motor overload/underload, over/undervoltage, overspeed, overtemperature, motor stall, ground fault and thermal motor protection."
+      },
+      "comms": {
+        "status": "yes",
+        "remark": "Embedded Dual-port Ethernet and Modbus serial; optional fieldbuses for BMS/SCADA/PLC."
+      },
+      "pid": {
+        "status": "yes",
+        "remark": "Embedded process PID suitable for pressure/flow pump control."
+      },
+      "skip_frequencies": {
+        "status": "yes",
+        "remark": "Critical speed avoidance via programmable skip frequencies."
+      },
+      "power_ride_through": {
+        "status": "yes",
+        "remark": "Stop and Go / kinetic buffering features help ride through short supply interruptions."
+      },
+      "efficiency_98": {
+        "status": "yes",
+        "remark": "High efficiency (~98% class) typical for ATV630 Process drives at full load."
+      },
+      "ambient_50c": {
+        "status": "yes",
+        "remark": "Ambient capability with derating above 40 °C up to catalog limits (50 °C with derating)."
+      },
+      "altitude_1000m": {
+        "status": "yes",
+        "remark": "No derating up to 1000 m; apply catalog derating above."
+      },
+      "overload_vt": {
+        "status": "yes",
+        "remark": "Normal duty overload suitable for pumps/fans (110% / 60 s per 10 min typical)."
+      },
+      "output_freq_500": {
+        "status": "yes",
+        "remark": "Wide output frequency range supporting process applications up to high-speed settings per motor limits."
+      },
+      "hoa_local_remote": {
+        "status": "yes",
+        "remark": "Local/remote and Hand/Off/Auto operation via terminal / keypad and digital inputs."
+      },
+      "dry_contacts": {
+        "status": "yes",
+        "remark": "Relay outputs assignable to Run / Fault status."
+      },
+      "analog_io": {
+        "status": "yes",
+        "remark": "Analog I/O for speed reference and feedback (0–10 V / 4–20 mA)."
+      },
+      "bypass": {
+        "status": "partial",
+        "remark": "Bypass contactor scheme with MCP / disconnect can be engineered in a Schneider or approved panel builder package."
+      },
+      "line_reactors": {
+        "status": "yes",
+        "remark": "Built-in DC choke on many ATV630 ratings; additional AC line reactors available."
+      },
+      "output_filter": {
+        "status": "yes",
+        "remark": "Output choke / sinus filter options for long motor cables."
+      },
+      "ul_etl": {
+        "status": "yes",
+        "remark": "UL Type 1 / CE variants available depending on commercial reference (e.g. ATV630…N4)."
+      },
+      "ce_iec": {
+        "status": "yes",
+        "remark": "CE marked to applicable IEC/EN drive standards."
+      },
+      "iso14001": {
+        "status": "yes",
+        "remark": "Schneider Electric ISO 14001 certified manufacturing / environmental management."
+      },
+      "local_support_egypt": {
+        "status": "yes",
+        "remark": "Local Schneider Electric Egypt support channel for start-up, training and spares."
+      },
+      "space_heater": {
+        "status": "partial",
+        "remark": "Space heater provided in packaged enclosure when ambient/condensation conditions require it."
+      },
+      "manufacturer_approved": {
+        "status": "yes",
+        "remark": "Schneider Electric Altivar Process ATV630 offered subject to approved manufacturers list."
+      },
+      "input_voltage_380_400": {
+        "status": "yes",
+        "remark": "380–480 V three-phase catalog references (…N4) with ±10% tolerance."
+      },
+      "freq_50hz": {
+        "status": "yes",
+        "remark": "50/60 Hz supply compatibility."
+      },
+      "power_factor": {
+        "status": "yes",
+        "remark": "High power factor operation; further improvement with AFE/low-harmonic options if required."
+      },
+      "cable_length": {
+        "status": "yes",
+        "remark": "Motor cable length per ATV630 installation manual with recommended shielded cable / filters."
+      },
+      "auto_restart": {
+        "status": "yes",
+        "remark": "Configurable automatic fault restart with attempt limiting."
+      },
+      "flux_optimization": {
+        "status": "yes",
+        "remark": "Energy optimization functions for partial load."
+      },
+      "noise_switching": {
+        "status": "yes",
+        "remark": "Selectable switching frequency to limit audible noise."
+      },
+      "factory_test": {
+        "status": "yes",
+        "remark": "Factory tested by manufacturer; packaged options tested before shipment."
+      },
+      "submittals": {
+        "status": "yes",
+        "remark": "Full technical submittal package available (drawings, manuals, ratings, certificates)."
+      }
+    }
+  },
+  "ATV680": {
+    "family_name": "Altivar Process ATV680 (Low Harmonic / AFE)",
+    "typical_refs": [
+      "ATV680"
+    ],
+    "capabilities": {
+      "afe_low_harmonic": {
+        "status": "yes",
+        "remark": "ATV680 low-harmonic drives with active front-end / advanced filtering deliver sinusoidal mains current; THDi typically reduced to about 2…5%, meeting IEEE 519 recommendations for current harmonics, including partial-load operation from ~30% Pn."
+      },
+      "ip54_enclosure": {
+        "status": "yes",
+        "remark": "Floor-standing / cabinet solutions available including IP54 designs with filtered air inlets as specified."
+      },
+      "pwm_vhz": {
+        "status": "yes",
+        "remark": "Digitally controlled PWM drive with modern motor control for squirrel-cage induction motors on pumps and fans."
+      },
+      "ieee519": {
+        "status": "yes",
+        "remark": "Low-harmonic ATV680 topology with active/passive filtering fulfills IEEE 519 harmonic recommendations; project-specific harmonic spectrum can be submitted."
+      },
+      "emc_rfi": {
+        "status": "yes",
+        "remark": "Built-in EMC filters; conformity with EN 61800-3 / Low Voltage Directive when installed per EMC instructions. CE marked."
+      },
+      "protections": {
+        "status": "yes",
+        "remark": "Main protections: overcurrent, short circuit, input/output phase loss, motor overload/underload, over/undervoltage, overspeed, overtemperature, motor stall and internal faults — electronic shutdown without relying on fuses."
+      },
+      "comms": {
+        "status": "yes",
+        "remark": "Built-in Ethernet and Modbus communication for BMS / SCADA / PLC interface."
+      },
+      "pid": {
+        "status": "yes",
+        "remark": "Built-in PID controller for customer process control."
+      },
+      "skip_frequencies": {
+        "status": "yes",
+        "remark": "Comply with 3 programmable skip / critical frequencies."
+      },
+      "power_ride_through": {
+        "status": "yes",
+        "remark": "Power loss ride-through using energy stored in the load / DC bus as available."
+      },
+      "efficiency_98": {
+        "status": "yes",
+        "remark": "Comply with 98% efficiency at full load including required filter equipment of the LH design."
+      },
+      "ambient_50c": {
+        "status": "yes",
+        "remark": "Ambient -10…+50 °C (above +40 °C with derating). Design can apply derating for 45 °C ambient."
+      },
+      "altitude_1000m": {
+        "status": "yes",
+        "remark": "Up to 1000 m without derating; higher altitudes per derating tables."
+      },
+      "overload_vt": {
+        "status": "yes",
+        "remark": "Normal duty selection for pumps: 110% for 60 s per 10 minutes."
+      },
+      "output_freq_500": {
+        "status": "yes",
+        "remark": "Output frequency range 0 to 500 Hz; resolution 0.01 Hz."
+      },
+      "hoa_local_remote": {
+        "status": "yes",
+        "remark": "User interface / H-O-A and local-remote control provided per control specification in packaged solution."
+      },
+      "dry_contacts": {
+        "status": "yes",
+        "remark": "Status and fault contacts available for Run / Fault indication to BMS."
+      },
+      "analog_io": {
+        "status": "yes",
+        "remark": "Analog speed reference and feedback signals supported."
+      },
+      "bypass": {
+        "status": "partial",
+        "remark": "Manual bypass circuitry can be supplied in a separate section of the VFD enclosure with overload protection in drive and bypass modes."
+      },
+      "line_reactors": {
+        "status": "yes",
+        "remark": "Low-harmonic design with active input bridge / filter module; additional reactors as applicable to the package."
+      },
+      "output_filter": {
+        "status": "yes",
+        "remark": "Output choke / sinus filter can be included where motor cable length or insulation requires it."
+      },
+      "ul_etl": {
+        "status": "yes",
+        "remark": "Product certifications per catalog (CE and applicable UL listings for the selected reference / package)."
+      },
+      "ce_iec": {
+        "status": "yes",
+        "remark": "CE marking on rating plate; subject to EMC directive and Low Voltage Directive; EN 61800-3 / EN 61800-5-1."
+      },
+      "iso14001": {
+        "status": "yes",
+        "remark": "Comply — ATV680 / Schneider manufacturing complies with ISO 14001 environmental certification."
+      },
+      "local_support_egypt": {
+        "status": "yes",
+        "remark": "Comply — permanent Schneider Electric Egypt representation with trained support; commissioning and 24h escalation channel available."
+      },
+      "space_heater": {
+        "status": "yes",
+        "remark": "Enclosure space heater can be included for condensation control as specified."
+      },
+      "manufacturer_approved": {
+        "status": "yes",
+        "remark": "Comply — Schneider Electric is one of the approved vendors (subject to Engineer)."
+      },
+      "input_voltage_380_400": {
+        "status": "yes",
+        "remark": "Comply — rated input 380–400 V three-phase as per technical offer; ±10% tolerance."
+      },
+      "freq_50hz": {
+        "status": "yes",
+        "remark": "Comply — 50 Hz ±5%."
+      },
+      "power_factor": {
+        "status": "yes",
+        "remark": "Comply — fundamental power factor 0.97 or better at full load with active input stage."
+      },
+      "cable_length": {
+        "status": "yes",
+        "remark": "Cable length up to manufacturer recommendation (e.g. ~150 m VSD to motor with recommended shielded cable) subject to Engineer approval."
+      },
+      "auto_restart": {
+        "status": "yes",
+        "remark": "Programmable automatic restart after overvoltage/overcurrent/loss of analog signal with limited attempts."
+      },
+      "flux_optimization": {
+        "status": "yes",
+        "remark": "Built-in automatic flux optimization to reduce energy and noise at partial load."
+      },
+      "noise_switching": {
+        "status": "yes",
+        "remark": "Comply — switching frequency ≥2 kHz available to minimize audible noise."
+      },
+      "factory_test": {
+        "status": "yes",
+        "remark": "Manufacturer factory testing of complete drive and optional features."
+      },
+      "submittals": {
+        "status": "yes",
+        "remark": "Performance data, drawings, manuals, warranty and catalog information will be submitted."
+      }
+    }
+  },
+  "ATV660": {
+    "family_name": "Altivar Process ATV660 (Compact Drive System)",
+    "typical_refs": [
+      "ATV660"
+    ],
+    "capabilities": {
+      "afe_low_harmonic": {
+        "status": "partial",
+        "remark": "ATV660 is a standard-harmonics Compact Drive System; for THDi <5% / IEEE 519 low-harmonic duty, select ATV680 (or ATV630 + passive filter below 110 kW) instead."
+      },
+      "ip54_enclosure": {
+        "status": "yes",
+        "remark": "ATV660 Compact Drive Systems offered in IP23 cabinet construction; higher IP packages can be engineered as specified."
+      },
+      "pwm_vhz": {
+        "status": "yes",
+        "remark": "ATV660 PWM Process drive system with motor control suitable for pumps and fans."
+      },
+      "ieee519": {
+        "status": "partial",
+        "remark": "Standard ATV660 harmonics are mitigated by system design; for strict IEEE 519 / THDi <5%, propose ATV680 low-harmonic topology."
+      },
+      "emc_rfi": {
+        "status": "yes",
+        "remark": "EMC filter options and CE / EN 61800-3 compliance when installed per Schneider instructions."
+      },
+      "protections": {
+        "status": "yes",
+        "remark": "Comprehensive electronic protections aligned with Altivar Process ATV600 range."
+      },
+      "comms": {
+        "status": "yes",
+        "remark": "Embedded Ethernet / Modbus communication for BMS / SCADA / PLC."
+      },
+      "pid": {
+        "status": "yes",
+        "remark": "Embedded process PID for pump/fan applications."
+      },
+      "skip_frequencies": {
+        "status": "yes",
+        "remark": "Programmable skip frequencies for critical speed avoidance."
+      },
+      "power_ride_through": {
+        "status": "yes",
+        "remark": "Power-loss ride-through / kinetic buffering features of Altivar Process."
+      },
+      "efficiency_98": {
+        "status": "yes",
+        "remark": "High efficiency Process drive system (~98% class, configuration dependent)."
+      },
+      "ambient_50c": {
+        "status": "yes",
+        "remark": "Ambient capability with catalog derating above 40 °C."
+      },
+      "altitude_1000m": {
+        "status": "yes",
+        "remark": "No derating up to 1000 m; apply catalog derating above."
+      },
+      "overload_vt": {
+        "status": "yes",
+        "remark": "Normal / Heavy duty ratings published in Catalog (ND preferred when both match)."
+      },
+      "output_freq_500": {
+        "status": "yes",
+        "remark": "Wide output frequency range per Process motor limits."
+      },
+      "hoa_local_remote": {
+        "status": "yes",
+        "remark": "Local/remote and Hand/Off/Auto via terminal / keypad and digital inputs."
+      },
+      "dry_contacts": {
+        "status": "yes",
+        "remark": "Relay outputs assignable to Run / Fault status."
+      },
+      "analog_io": {
+        "status": "yes",
+        "remark": "Analog I/O for speed reference and feedback (0–10 V / 4–20 mA)."
+      },
+      "bypass": {
+        "status": "partial",
+        "remark": "Bypass arrangements can be engineered in the drive-system package."
+      },
+      "line_reactors": {
+        "status": "yes",
+        "remark": "ATV660 Compact systems include line-side harmonic/reactor mitigation appropriate to the offer (not a classic DC-choke accessory SKU)."
+      },
+      "output_filter": {
+        "status": "yes",
+        "remark": "Output choke / sinus filter options available for long motor cables."
+      },
+      "ul_etl": {
+        "status": "yes",
+        "remark": "Certifications per selected commercial reference / package."
+      },
+      "ce_iec": {
+        "status": "yes",
+        "remark": "CE marked to applicable IEC/EN drive standards."
+      },
+      "iso14001": {
+        "status": "yes",
+        "remark": "Schneider manufacturing complies with ISO 14001 environmental certification."
+      },
+      "space_heater": {
+        "status": "partial",
+        "remark": "Space heater options available for cabinet systems as specified."
+      },
+      "input_voltage_380_400": {
+        "status": "yes",
+        "remark": "380–415 V / related Process supply classes per Catalog ATV660 tables."
+      },
+      "freq_50hz": {
+        "status": "yes",
+        "remark": "Rated for 50/60 Hz supplies within catalog tolerance."
+      },
+      "power_factor": {
+        "status": "yes",
+        "remark": "High power factor Process offer; project PF confirmed from Catalog / calculation."
+      },
+      "cable_length": {
+        "status": "yes",
+        "remark": "Motor cable length limits and filter recommendations per Installation instruction."
+      },
+      "auto_restart": {
+        "status": "yes",
+        "remark": "Automatic restart / catch-on-the-fly functions available in Programming guide."
+      },
+      "flux_optimization": {
+        "status": "yes",
+        "remark": "Energy-saving / flux optimization features of Altivar Process."
+      },
+      "noise_switching": {
+        "status": "yes",
+        "remark": "Adjustable switching frequency to manage audible noise."
+      },
+      "factory_test": {
+        "status": "yes",
+        "remark": "Manufacturer factory testing of drive system packages."
+      },
+      "submittals": {
+        "status": "yes",
+        "remark": "Performance data, drawings, manuals, warranty and catalog information will be submitted."
+      },
+      "manufacturer_approved": {
+        "status": "yes",
+        "remark": "Schneider Electric Altivar Process ATV660 is an approved Process drive-system manufacturer offer."
+      },
+      "local_support_egypt": {
+        "status": "yes",
+        "remark": "Local Schneider Electric support, spare parts and commissioning services available in Egypt / region."
+      }
+    }
+  }
+}

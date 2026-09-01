@@ -1,0 +1,265 @@
+{
+  "_meta": {
+    "policy": "Page numbers only when the topic keywords appear on that PDF page in the indexed manuals.",
+    "manuals": [
+      "Catalog Altivar Process ATV600 variable speed drives.pdf",
+      "ATV600-Programming-Manual-EN-EAV64318-14.pdf",
+      "ATV630_650_Installation_manual_EN_EAV64301_13.pdf"
+    ]
+  },
+  "overload_vt": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "use_selected_catalog_page": true,
+    "section": "ND/HD rating table for selected reference",
+    "evidence": "Page from sized drive CSV source_page only."
+  },
+  "input_voltage_380_400": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "use_selected_catalog_page": true,
+    "section": "Supply / rating table for selected reference",
+    "evidence": "Page from sized drive CSV source_page only."
+  },
+  "freq_50hz": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "use_selected_catalog_page": true,
+    "section": "Supply / rating table for selected reference",
+    "evidence": "Page from sized drive CSV source_page only."
+  },
+  "afe_low_harmonic": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/13",
+    "pdf_page": 17,
+    "evidence": "Indexed catalog PDF p.17 (printed 1/13); matched 'thdi y'."
+  },
+  "ieee519": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/13",
+    "pdf_page": 17,
+    "evidence": "Indexed catalog PDF p.17 (printed 1/13); matched 'thdi y'."
+  },
+  "line_reactors": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/13",
+    "pdf_page": 17,
+    "evidence": "Indexed catalog PDF p.17 (printed 1/13); matched 'dc choke'."
+  },
+  "power_factor": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/13",
+    "pdf_page": 17,
+    "evidence": "Indexed catalog PDF p.17 (printed 1/13); matched 'optimum power'."
+  },
+  "protections": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "672",
+    "pdf_page": 672,
+    "evidence": "Client correction in gold-test.xlsx; page verified in programming index."
+  },
+  "dry_contacts": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "2/23",
+    "pdf_page": 41,
+    "evidence": "Indexed catalog PDF p.41 (printed 2/23); matched 'relay outputs'."
+  },
+  "analog_io": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "2/3",
+    "pdf_page": 23,
+    "evidence": "Indexed catalog PDF p.23 (printed 2/3); matched 'analog inputs'."
+  },
+  "hoa_local_remote": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/16",
+    "pdf_page": 20,
+    "evidence": "Indexed catalog PDF p.20 (printed 1/16); matched 'graphic display terminal'."
+  },
+  "comms": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/16",
+    "pdf_page": 20,
+    "evidence": "Indexed catalog PDF p.20 (printed 1/16); matched 'modbus serial'."
+  },
+  "output_filter": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "2/33",
+    "pdf_page": 51,
+    "evidence": "Indexed catalog PDF p.51 (printed 2/33); matched 'option: passive'."
+  },
+  "emc_rfi": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/13",
+    "pdf_page": 17,
+    "evidence": "Indexed catalog PDF p.17 (printed 1/13); matched 'emc filter'."
+  },
+  "ip54_enclosure": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/12",
+    "pdf_page": 16,
+    "evidence": "Indexed catalog PDF p.16 (printed 1/12); matched 'ip55'."
+  },
+  "efficiency_98": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/9",
+    "pdf_page": 13,
+    "evidence": "Indexed catalog PDF p.13 (printed 1/9); matched 'efficiency'."
+  },
+  "pwm_vhz": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "143",
+    "pdf_page": 143,
+    "evidence": "Indexed programming PDF p.143 (printed 143); matched 'voltage/frequency'."
+  },
+  "pid": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "137",
+    "pdf_page": 137,
+    "evidence": "Indexed programming PDF p.137 (printed 137); matched 'pid regulator'."
+  },
+  "skip_frequencies": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "430",
+    "pdf_page": 430,
+    "evidence": "Indexed programming PDF p.430 (printed 430); matched 'skip frequency'."
+  },
+  "power_ride_through": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "26",
+    "pdf_page": 26,
+    "evidence": "Indexed programming PDF p.26 (printed 26); matched 'stop and go'."
+  },
+  "auto_restart": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "31",
+    "pdf_page": 31,
+    "evidence": "Indexed programming PDF p.31 (printed 31); matched 'automatic restart'."
+  },
+  "flux_optimization": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "90",
+    "pdf_page": 90,
+    "evidence": "Indexed programming PDF p.90 (printed 90); matched 'energy saving'."
+  },
+  "noise_switching": {
+    "doc_type": "User guide",
+    "document": "ATV600 Programming Manual (EAV64318)",
+    "page": "79",
+    "pdf_page": 79,
+    "evidence": "Indexed programming PDF p.79 (printed 79); matched 'switching frequency'."
+  },
+  "output_freq_500": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/14",
+    "pdf_page": 18,
+    "evidence": "Indexed catalog PDF p.18 (printed 1/14); matched '0.1...500 hz'."
+  },
+  "cable_length": {
+    "doc_type": "Instruction sheet",
+    "document": "ATV600 Installation Manual (EAV64301)",
+    "page": "17",
+    "pdf_page": 17,
+    "evidence": "Indexed installation PDF p.17 (printed 17); matched 'motor cable'."
+  },
+  "space_heater": {
+    "doc_type": "Instruction sheet",
+    "document": "ATV600 Installation Manual (EAV64301)",
+    "page": null,
+    "section": "space_heater (page not verified in manuals)",
+    "evidence": "Keywords not found as a unique page hit."
+  },
+  "bypass": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "section": "bypass (page not verified in manuals)",
+    "evidence": "Keywords not found as a unique page hit."
+  },
+  "ambient_50c": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/12",
+    "pdf_page": 16,
+    "evidence": "Indexed catalog PDF p.16 (printed 1/12); matched 'ambient operating temperature'."
+  },
+  "altitude_1000m": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/12",
+    "pdf_page": 16,
+    "evidence": "Indexed catalog PDF p.16 (printed 1/12); matched '1,000 m'."
+  },
+  "ce_iec": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "section": "ce_iec (page not verified in manuals)",
+    "evidence": "Keywords not found as a unique page hit."
+  },
+  "ul_etl": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "section": "ul_etl (page not verified in manuals)",
+    "evidence": "Keywords not found as a unique page hit."
+  },
+  "iso14001": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": "1/13",
+    "pdf_page": 17,
+    "evidence": "Indexed catalog PDF p.17 (printed 1/13); matched 'recyclable'."
+  },
+  "factory_test": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "section": "factory_test (page not verified in manuals)",
+    "evidence": "Keywords not found as a unique page hit."
+  },
+  "submittals": {
+    "doc_type": "Product Datasheet",
+    "document": "Attached Product Datasheets + Catalog",
+    "page": null,
+    "section": "Submittal package",
+    "evidence": "No single verified page."
+  },
+  "manufacturer_approved": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "section": "Schneider Electric manufacturer offer",
+    "evidence": "No single verified page."
+  },
+  "local_support_egypt": {
+    "doc_type": "Catalog",
+    "document": "Catalog Altivar Process ATV600 variable speed drives",
+    "page": null,
+    "section": "Support / services (page not verified)",
+    "evidence": "No single verified page."
+  }
+}
